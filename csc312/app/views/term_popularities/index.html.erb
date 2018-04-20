@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align:center">Term Popularities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th/>
+      <th style="text-align:center">Keyword</th>
+      <th style="text-align:center">Tweet Count</th>
+      <th style="text-align:center">Coordinates</th>
+      <th/>
+      <th style="text-align:center">Updated</th>
+      <th style="text-align:center">Created</th>
+      <th colspan="1"></th>
+      <th/>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!--  Generates a table row by row from elements of @term_popularities -->
+    <% @term_popularities.each do |term_popularity| %>
+      <tr>
+        <td/>
+
+        <td style="text-align:center">
+          <%= term_popularity.keyword %>
+        </td>
+
+        <td style="text-align:center">
+          <%= term_popularity.tweet_count %>
+        </td>
+
+        <td style="text-align:center">
+          <%= verify_coordinates(term_popularity.coordinates) %>
+        </td>
+
+        <td/>
+
+        <td style="text-align:center">
+          <%= term_popularity.updated_at %>
+        </td>
+
+        <td style="text-align:center">
+          <%= term_popularity.created_at %>
+        </td>
+
+        <td style="text-align:center">
+          <%= link_to 'Destroy', 
+            term_popularity, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+
+        <td/>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

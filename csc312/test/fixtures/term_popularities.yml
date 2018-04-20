@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keyword: MyString
+  tweet_count: 1
+  coordinates: MyString
+
+two:
+  keyword: MyString
+  tweet_count: 1
+  coordinates: MyString
