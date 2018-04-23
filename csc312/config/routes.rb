@@ -2,11 +2,11 @@
 # @Author: Ricky Davidon
 # @E-Mail: rwdavidsonjr@yahoo.com
 # @Date:   2018-04-20 02:19:32
-# @Last Modified time: 2018-04-20 04:35:22
+# @Last Modified time: 2018-04-22 21:01:57
 
 # Routes users to controllers and actions based on provided keywords
 Rails.application.routes.draw do
-  # Topic Popularity actions with search secrely as home page
+  # Topic Popularity actions with search as root page
   root 'topic_popularity#search'
   get 'list' => 'topic_popularity#list'
   get 'map' => 'topic_popularity#map'
