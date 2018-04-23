@@ -1,8 +1,8 @@
 # topic_popularity_controller.rb
-# @Author: Ricky Davidson
+# @Author: Ricky Davidson & Ryland Wheliss
 # @E-Mail: rwdavidsonjr@yahoo.com
 # @Date:   2018-04-20 03:47:27
-# @Last Modified time: 2018-04-20 04:38:05
+# @Last Modified time: 2018-04-20 05:02:16
 
 class TopicPopularityController < ApplicationController
   # Root page with a search bar. Shows results when provided a keyword 'q='
