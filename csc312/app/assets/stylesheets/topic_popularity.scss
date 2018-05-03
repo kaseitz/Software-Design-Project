@@ -1,3 +1,38 @@
+/* topic_popularity.scss
+* @Author: Daniel Lammens
+* @E-Mail: dalammens@davidson.edu
+* @Date:   2018-04-20 02:22:48
+* @Last Modified time: 2018-04-22 21:55:55
+*/
 // Place all the styles related to the topic_popularity controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+ 
+ color: floralwhite;
+}
+body{
+ background-color: lightblue;
+ color: floralwhite; 
+}
+.shadowbox{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ border: 1px solid #333;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}

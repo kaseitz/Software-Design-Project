@@ -1,4 +1,4 @@
-# schema.rb
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20180417211818) do
   enable_extension "plpgsql"
 
   create_table "term_popularities", force: :cascade do |t|
-    t.string "keyword", null: false
-    t.integer "tweet_count", null: false
-    t.string "coordinates", null: false
+    t.string "keyword"
+    t.integer "tweet_count", default: 0
+    t.string "coordinates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

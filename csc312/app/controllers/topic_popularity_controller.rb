@@ -2,13 +2,14 @@
 # @Author: Ricky Davidson & Ryland Wheliss
 # @E-Mail: rwdavidsonjr@yahoo.com
 # @Date:   2018-04-20 03:47:27
-# @Last Modified time: 2018-04-20 05:02:16
+# @Last Modified time: 2018-04-22 22:03:26
 
 class TopicPopularityController < ApplicationController
   # Root page with a search bar. Shows results when provided a keyword 'q='
   def search
     # topic_popularity_controller.rb
     @search_term = params[:q] || nil
+    puts @search_term
 
     # Find a result for a possible searched keyword
     @result = nil
