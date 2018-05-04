@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1 style="text-align:center">Term Popularities</h1>
+<h1>Term Popularities</h1>
 
 <table>
   <thead>
     <tr>
       <th/>
-      <th style="text-align:center">Keyword</th>
-      <th style="text-align:center">Tweet Count</th>
-      <th style="text-align:center">Coordinates</th>
+      <th>Keyword</th>
+      <th>Tweet Count</th>
+      <th>Coordinates</th>
       <th/>
-      <th style="text-align:center">Updated</th>
-      <th style="text-align:center">Created</th>
+      <th>Updated</th>
+      <th>Created</th>
       <th colspan="1"></th>
       <th/>
     </tr>
@@ -23,31 +23,34 @@
       <tr>
         <td/>
 
-        <td style="text-align:center">
+        <td>
           <%= term_popularity.keyword %>
         </td>
 
-        <td style="text-align:center">
+        <td>
           <%= term_popularity.tweet_count %>
         </td>
 
-        <td style="text-align:center">
+        <td>
           <%= verify_coordinates(term_popularity.coordinates) %>
         </td>
 
         <td/>
 
-        <td style="text-align:center">
+        <td>
           <%= term_popularity.updated_at %>
         </td>
 
-        <td style="text-align:center">
+        <td>
           <%= term_popularity.created_at %>
         </td>
 
-        <td style="text-align:center">
-          <%= link_to 'Destroy', 
-            term_popularity, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td>
+          <a>
+            <%= link_to 'Destroy', 
+                        term_popularity, 
+                        method: :delete, data: { confirm: 'Are you sure?' } %>
+          </a>
         </td>
 
         <td/>
