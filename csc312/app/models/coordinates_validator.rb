@@ -24,13 +24,13 @@ class CoordinatesValidator < ActiveModel::Validator
   # 
   def validate record
     # coordinates_validator.rb
-    if not record.coordinates
+    unless record.coordinates
       puts "No coordinates given for keyword: #{record.keyword}"
       return nil
 
     else
       # Ensure record's coordinates is an array
-      if not record.coordinates.is_a? Array 
+      unless record.coordinates.is_a? Array 
         record.errors[:base] << "Coordinates is a " +
           "#{record.coordinates.class}. Should be an array of arrays of " +
           "length 2."
@@ -40,14 +40,14 @@ class CoordinatesValidator < ActiveModel::Validator
       # Check each tweet's coordinates given for constraints
       record.coordinates.each do |tweet_coordinates|
         # Must be arrays
-        if not tweet_coordinates.is_a? Array
+        unless tweet_coordinates.is_a? Array
           record.errors[:base] << "Coordinates has a " +
             "#{tweet_coordinates.class}. Should be an array of length 2."
           return nil
         end
 
         # Must be arrays of length 2
-        if not tweet_coordinates.length == 2
+        unless tweet_coordinates.length == 2
           record.errors[:base] << "Coordinates has an array of length" +
             "#{tweet_coordinates.length}. Should be an array of length 2."
           return nil
@@ -55,7 +55,7 @@ class CoordinatesValidator < ActiveModel::Validator
 
         # Must be arrays of numbers
         tweet_coordinates.each do |tweet_coordinate|
-          if not tweet_coordinate.is_a? Numeric
+          unless tweet_coordinate.is_a? Numeric
             record.errors[:base] << "Coordinate of class " +
               "#{tweet_coordinate.class}. Should be an a numeric class."
             return nil
