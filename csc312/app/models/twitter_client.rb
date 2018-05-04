@@ -6,13 +6,11 @@
 # class TwitterClient < ApplicationRecord TODO: UNCOMMENT
 class TwitterClient
   include HTTParty
-
-
+  # debug_output $stdout
 
   hostport = ENV['TWIITER_PORT'] || 'https://ads-api.twitter.com'
 
-  base_uri "#{hostport}/3/insights/keywords"
-  # basic_auth TODO: AUTHENTIC
+  base_uri("#{hostport}/3/insights/keywords")
 
   format:json
 
@@ -27,8 +25,21 @@ class TwitterClient
       keywords: term
     }
 
-    response = get('/search', query: parameters)
+    auth = {
+      email_address: ENV['WAILS_EMAIL'],
+      password: ENV['WAILS_PASS']
+    }
+    # print base_uri
+
+    options = {
+      header: {
+        Authentification: 'Basic',
+        Authorization: "#{ENV['WAILS_EMAIL']}:#{ENV['WAILS_PASS']}"
+      },
+      query: parameters
+    }
+
+    response = get('/search', options)
+    return response
   end
-
-
 end

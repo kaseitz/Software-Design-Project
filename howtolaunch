@@ -1,0 +1,11 @@
+Requirements:
+	Heroku CLI
+	Empty App on Heroku
+	Access to the GitHub for this project (Obviously, since you have this file)
+	Run at the project root
+
+Connecting to the app repo on Heroku:
+	heroku git:remote -a wails
+
+Uploading the app to Heroku:
+	git subtree push --prefix <appname> heroku master
