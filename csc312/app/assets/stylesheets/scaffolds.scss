@@ -1,0 +1,74 @@
+ /* Main */ 
+  /* Everything in View */
+  body {
+    line-height: 2;
+
+    /* General Font Settings */
+    font-family: Arial;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: normal;
+  }
+
+/* Text Containers */
+  p {
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+  }
+
+  /* Links */
+  a {
+    transition: color 0.2s ease;
+    text-decoration: underline;
+    color: #00BC8A;
+  }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+/* Table */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+
+    /* Table Header */
+    table thead {
+      border-bottom: solid 0.3em;
+      border-bottom-color: rgba(50, 50, 50, 0.25);
+    }
+
+      table thead th {
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 0 0.75em 0.75em 0.75em;
+        color: #000;
+      }
+
+    /* Table Body */
+    table tbody tr {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: solid 0.15em;
+      border-color: rgba(50, 50, 50, 0.25);
+      color: #444;
+    }
+
+      table tbody tr:nth-child(2n + 1) {
+        background-color: rgba(144, 144, 144, 0.075);
+      }
+
+    /* Table Cells */
+    table tbody tr td {
+      padding: 0.75em 0.75em;
+    }
