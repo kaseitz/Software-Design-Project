@@ -7,5 +7,5 @@ Requirements:
 Connecting to the app repo on Heroku:
 	heroku git:remote -a wails
 
-Uploading the app to Heroku:
-	git subtree push --prefix <appname> heroku master
+Uploading the app to Heroku: (From the root folder! Software-Design-Project)
+	git subtree push --prefix csc312 heroku master
